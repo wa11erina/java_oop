@@ -2,7 +2,7 @@ package guru.qa;
 
 import java.util.TreeSet;
 
-public class MusicAlbum {
+public class MusicAlbum implements Comparable{
     private String artist;
     private String title;
     private int year_of_release;
@@ -67,6 +67,12 @@ public class MusicAlbum {
         for (MusicAlbum i : this.bestAlbums2023Set) {
             System.out.println(i);
         }
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        MusicAlbum casted = (MusicAlbum) o;
+        return (this.artist + this.title).compareTo(casted.artist + casted.title);
     }
 
     @Override

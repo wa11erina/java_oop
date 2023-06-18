@@ -123,13 +123,13 @@ public class MainOop {
 
         MusicAlbum bestAlbums2023 = new MusicAlbum();
         bestAlbums2023.addAlbumToSet(heavener);
-//        bestAlbums2023.addAlbumToSet(kodeseven);
-//        bestAlbums2023.addAlbumToSet(currents2023);
-//        bestAlbums2023.addAlbumToSet(sleeptoken2023);
-//        bestAlbums2023.printAlbums();
-//        bestAlbums2023.removeAlbum(kodeseven);
-//        bestAlbums2023.printAlbums();
-//        System.out.println("Find: Take Me Back To Eden" + " " + bestAlbums2023.findAlbum(sleeptoken2023));
+        bestAlbums2023.addAlbumToSet(kodeseven);
+        bestAlbums2023.addAlbumToSet(currents2023);
+        bestAlbums2023.addAlbumToSet(sleeptoken2023);
+        bestAlbums2023.printAlbums();
+        bestAlbums2023.removeAlbum(kodeseven);
+        bestAlbums2023.printAlbums();
+        System.out.println("Search for the best album 4ever & ever: Take Me Back To Eden." + " " + bestAlbums2023.findAlbum(sleeptoken2023));
 
 
     }
