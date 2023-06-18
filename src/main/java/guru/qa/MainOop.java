@@ -1,7 +1,5 @@
 package guru.qa;
 
-import java.util.Arrays;
-
 public class MainOop {
 
     public static void main(String[] args) {
@@ -24,6 +22,20 @@ public class MainOop {
         Book[] previousBooks = new Book[] {future, metro, text};
         outpost.addBook(previousBooks);
         outpost.printPreviousBooks();
+        outpost.printBookByTitleIfPresent("Dusk");
+        outpost.printBookByTitleIfPresent("Futu.re");
+
+        Book books = new Book();
+        books.addBookToList(future);
+        books.addBookToList(metro);
+        books.addBookToList(text);
+        books.addBookToList(outpost);
+        books.printBooks();
+        books.removeBook(text);
+        books.printBooks();
+        System.out.println("Find: The Metro Trilogy" + " " + books.findBook(metro));
+
+
 
         Car fordfocus = new Car("Ford", "Focus RS", 2010,
                 1700000, false);
@@ -41,6 +53,22 @@ public class MainOop {
                 1250000000, true);
         System.out.println(formula1.toString());
 
+        Car[] otherCityCars = new Car[] {bmw, nissan};
+        fordfocus.addCar(otherCityCars);
+        fordfocus.printOtherCityCars();
+        fordfocus.printCarByBrandIfPresent("Mazda");
+        fordfocus.printCarByBrandIfPresent("BMW");
+
+        Car cars = new Car();
+        cars.addCarToQueue(fordfocus);
+        cars.addCarToQueue(bmw);
+        cars.addCarToQueue(nissan);
+        cars.addCarToQueue(formula1);
+        cars.printCars();
+        cars.findCar(nissan);
+        cars.removeCar(fordfocus);
+        cars.printCars();
+
 
         Cat tisha = new Cat("Tisha", 13.5, "tabby", "Metis", true);
         System.out.println(tisha.toString());
@@ -53,6 +81,22 @@ public class MainOop {
 
         Cat musya = new Cat("Musya", 7, "white", "Russian", true);
         System.out.println(musya.toString());
+
+        Cat[] neighbours = new Cat[] {barsik, tigra, musya};
+        tisha.addNeighbour(neighbours);
+        tisha.printNeighbours();
+        tisha.printCatByNameIfPresent("Tigra");
+        tisha.printCatByNameIfPresent("Felix");
+
+        Cat cats = new Cat();
+        cats.addCatToSet(tisha);
+        cats.addCatToSet(barsik);
+        cats.addCatToSet(tigra);
+        cats.addCatToSet(musya);
+        cats.printCats();
+        cats.removeCat(tigra);
+        cats.printCats();
+        System.out.println("Find: Tisha" + " " + cats.findCat(tisha));
 
 
         MusicAlbum heavener = new MusicAlbum("Invent Animate", "Heavener", 2023,
@@ -70,6 +114,22 @@ public class MainOop {
         MusicAlbum sleeptoken2023 = new MusicAlbum("Sleep Token", "Take Me Back to Eden", 2023,
                 "Alternative Metal / Progressive Rock / Art Rock", false);
         System.out.println(sleeptoken2023.toString());
+
+        MusicAlbum[] otherGreatAlbums2023 = new MusicAlbum[] {heavener, kodeseven, currents2023};
+        sleeptoken2023.addAlbum(otherGreatAlbums2023);
+        sleeptoken2023.printGreatAlbums2023();
+        sleeptoken2023.printGreatAlbums2023ByArtistIfPresent("Invent Animate");
+        sleeptoken2023.printGreatAlbums2023ByArtistIfPresent("Architects");
+
+        MusicAlbum bestAlbums2023 = new MusicAlbum();
+        bestAlbums2023.addAlbumToSet(heavener);
+//        bestAlbums2023.addAlbumToSet(kodeseven);
+//        bestAlbums2023.addAlbumToSet(currents2023);
+//        bestAlbums2023.addAlbumToSet(sleeptoken2023);
+//        bestAlbums2023.printAlbums();
+//        bestAlbums2023.removeAlbum(kodeseven);
+//        bestAlbums2023.printAlbums();
+//        System.out.println("Find: Take Me Back To Eden" + " " + bestAlbums2023.findAlbum(sleeptoken2023));
 
 
     }
