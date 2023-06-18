@@ -22,9 +22,8 @@ public class MainOop {
         System.out.println(outpost.toString());
 
         Book[] previousBooks = new Book[] {future, metro, text};
-
+        outpost.addBook(previousBooks);
         outpost.printPreviousBooks();
-
 
         Car fordfocus = new Car("Ford", "Focus RS", 2010,
                 1700000, false);
